@@ -16,5 +16,6 @@ Here are the steps to set up this script:
 - The output video will be saved as "output.mp4" in this folder.  It will override any other output.mp4 that was here before it, so make sure that you move or rename the output before you run the script again.
 - Make sure that you leave Guilty Gear Strive as the active window the entire time. The script needs control of the game to properly navigate the menus, and if you use other windows it may mess up the recording process and make the script get stuck. Ideally, after you run the script you can just leave the program running until it finishes.
 - Each replay can be quite large in file size, if recorded in 1080p. Please make sure you have enough space for all of the replays to be saved. If you don't have enough space, the script will not function properly.
+- This program assumes that Guilty Gear Strive is running in Full Screen 1080p. If you have a different configuration, then the image recognition to navigate the menus will stop working.
 
 If you find any bugs in the script, please open an issue on the Github so that I can fix it as soon as possible, thanks.
