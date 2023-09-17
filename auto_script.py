@@ -25,7 +25,7 @@ def open_replay():
 
 def render_video():
 	clips = []
-	for file in listdir("./temp"):
+	for file in (path for path in listdir("./temp") if path != ".gitignore"):
 		clips.append(VideoFileClip("./temp/" + file).subclip(0, -2.2))
 	clips[0].start = 0
 	for i in range(1, len(clips)):
@@ -38,9 +38,11 @@ def render_video():
 
 # 1 = menu, 2 = loading, 3 = in battle
 def run(): 
-	reps = int(input("how many recordings?"))
+	reps = int(input("how many recordings? > "))
 	max_reps = reps
 	phase = 1
+	if reps < 1 or reps > 50:
+		print("invalid number of games, please select a number between 1 and 50")
 	sleep(5)
 	while reps > 0:
 		sleep(0.1)
@@ -78,4 +80,5 @@ def run():
 	render_video()
 
 if __name__ == '__main__':
-	run()
+	# run()
+	render_video()
